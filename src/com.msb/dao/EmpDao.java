@@ -21,14 +21,14 @@ public interface EmpDao {
 
     /**
      * read all employee information from the table
-     * @return all the emp info are add to the list
+     * @return all the emp info are added to the list
      */
     List<Emp> findAll();
 
     /**
      * update corresponding empno info based on emp object passed in
      * @param emp empno with other fields in the emp object
-     * @return > 0的正数，失败返回0
+     * @return > 0 if success, return 0 if failed
      */
     int updateEmp(Emp emp);
 

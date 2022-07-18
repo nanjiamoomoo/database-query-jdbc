@@ -1,7 +1,5 @@
 package com.msb.dao;
 
-import com.msb.pojo.Emp;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.sql.*;
@@ -55,7 +53,7 @@ public abstract class BaseDao {
             list = new ArrayList<>();
             Field[] fields = clazz.getDeclaredFields();
             for (Field field : fields) {
-                field.setAccessible(true); //设置属性可以访问
+                field.setAccessible(true); //set the field can be accessed
             }
 
             while (resultSet.next()) {

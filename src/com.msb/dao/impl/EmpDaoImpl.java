@@ -4,8 +4,6 @@ import com.msb.dao.BaseDao;
 import com.msb.dao.EmpDao;
 import com.msb.pojo.Emp;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmpDaoImpl extends BaseDao implements EmpDao {
