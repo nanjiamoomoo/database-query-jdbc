@@ -1,9 +1,10 @@
-package com.msb.util;
+package com.project.util;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+//Define a class to load properties under jdbc.properties
 public class PropertiesUtil {
     private Properties properties;
     public PropertiesUtil(String path) {

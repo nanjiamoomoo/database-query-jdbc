@@ -1,11 +1,11 @@
-package com.msb.views;
+package com.project.views;
 
-import com.msb.dao.DeptDao;
-import com.msb.dao.EmpDao;
-import com.msb.dao.impl.DeptDaoImpl;
-import com.msb.dao.impl.EmpDaoImpl;
-import com.msb.pojo.Dept;
-import com.msb.pojo.Emp;
+import com.project.dao.DeptDao;
+import com.project.dao.EmpDao;
+import com.project.dao.impl.DeptDaoImpl;
+import com.project.dao.impl.EmpDaoImpl;
+import com.project.pojo.Dept;
+import com.project.pojo.Emp;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +22,7 @@ public class EmpManageSystem {
     public static void main(String[] args) {
         o: while (true) {
             showMenu();
-            System.out.println("请录入选项");
+            System.out.println("Please enter your option: ");
             int option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -46,7 +46,7 @@ public class EmpManageSystem {
                 case 7:
                     break o;
                 default:
-                    System.out.println("请正确输入选项");
+                    System.out.println("Please enter collection option");
             }
         }
         sc.close();
@@ -63,67 +63,67 @@ public class EmpManageSystem {
     }
 
     private static void case3() {
-        System.out.println("请输入要删除员工的编号");
+        System.out.println("Please enter the employee number you want to delete:");
         int empno = sc.nextInt();
         empDao.deleteByEmpno(empno);
     }
 
     private static void case4() {
-        System.out.println("请输入员工编号");
+        System.out.println("Please enter employee number:");
         int empno = sc.nextInt();
-        System.out.println("请输入员工姓名");
+        System.out.println("Please enter employee name:");
         String ename = sc.next();
-        System.out.println("请输入员工职位");
+        System.out.println("Please enter employee job:");
         String job = sc.next();
-        System.out.println("请输入员工上级");
+        System.out.println("Please enter employee manager:");
         int mgr = sc.nextInt();
-        System.out.println("请输入员工入职日期,格式为yyyy-MM-dd");
+        System.out.println("Please enter employee hire date,format is yyyy-MM-dd:");
         Date hiredate = null;
         try {
             hiredate = simpleDateFormat.parse(sc.next());
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        System.out.println("请输入员工工资");
+        System.out.println("Please enter employee salary:");
         double sal = sc.nextDouble();
-        System.out.println("请输入员工补助");
+        System.out.println("Please enter employee commissions:");
         double comm = sc.nextDouble();
-        System.out.println("请输入员工部门号");
+        System.out.println("Please enter employee department number:");
         int deptno = sc.nextInt();
         Emp emp = new Emp(empno, ename, job, mgr, hiredate, sal, comm, deptno);
         empDao.updateEmp(emp);
     }
 
     private static void case5() {
-        System.out.println("请输入员工姓名");
+        System.out.println("Please enter employee name:");
         String ename = sc.next();
-        System.out.println("请输入员工职位");
+        System.out.println("Please enter employee job:");
         String job = sc.next();
-        System.out.println("请输入员工上级");
+        System.out.println("Please enter employee manager:");
         int mgr = sc.nextInt();
-        System.out.println("请输入员工入职日期,格式为yyyy-MM-dd");
+        System.out.println("Please enter employee hire date,format is yyyy-MM-dd:");
         Date hiredate = null;
         try {
             hiredate = simpleDateFormat.parse(sc.next());
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        System.out.println("请输入员工工资");
+        System.out.println("Please enter employee salary:");
         double sal = sc.nextDouble();
-        System.out.println("请输入员工补助");
+        System.out.println("Please enter employee commissions:");
         double comm = sc.nextDouble();
-        System.out.println("请输入员工部门号");
+        System.out.println("Please enter employee department number:");
         int deptno = sc.nextInt();
         Emp emp = new Emp(null, ename, job, mgr, hiredate, sal, comm, deptno);
         empDao.addEmp(emp);
     }
 
     private static void case6() {
-        System.out.println("请输入部门号");
+        System.out.println("Please enter department number:");
         Integer deptno = sc.nextInt();
-        System.out.println("请输入部门名称");
+        System.out.println("Please enter department name:");
         String dname = sc.next();
-        System.out.println("请输入部门地址");
+        System.out.println("Please enter department address:");
         String loc = sc.next();
         Dept dept = new Dept(deptno, dname, loc);
         deptDao.addDept(dept);
@@ -132,13 +132,13 @@ public class EmpManageSystem {
 
     public static void showMenu() {
         System.out.println("*********************************************");
-        System.out.println("* 1. 查看所有员工信息");
-        System.out.println("* 2. 查看所有部门信息");
-        System.out.println("* 3. 根据工号删除员工信息");
-        System.out.println("* 4. 增加工号修改员工信息");
-        System.out.println("* 5. 增加员工信息");
-        System.out.println("* 6. 增加部门信息");
-        System.out.println("* 7. 退出");
+        System.out.println("* 1. Check all employee information");
+        System.out.println("* 2. Check all department information");
+        System.out.println("* 3. Delete employee based on employee number");
+        System.out.println("* 4. Modify employee information");
+        System.out.println("* 5. Add new employee");
+        System.out.println("* 6. Add new department");
+        System.out.println("* 7. Exit");
         System.out.println("*********************************************");
     }
 }

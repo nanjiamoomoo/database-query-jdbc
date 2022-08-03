@@ -1,6 +1,6 @@
-package com.msb.dao;
+package com.project.dao;
 
-import com.msb.pojo.Dept;
+import com.project.pojo.Dept;
 
 import java.util.List;
 

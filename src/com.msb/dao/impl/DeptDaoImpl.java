@@ -1,12 +1,9 @@
-package com.msb.dao.impl;
+package com.project.dao.impl;
 
-import com.msb.dao.BaseDao;
-import com.msb.dao.DeptDao;
-import com.msb.pojo.Dept;
-import com.msb.pojo.Emp;
+import com.project.dao.BaseDao;
+import com.project.dao.DeptDao;
+import com.project.pojo.Dept;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DeptDaoImpl extends BaseDao implements DeptDao {

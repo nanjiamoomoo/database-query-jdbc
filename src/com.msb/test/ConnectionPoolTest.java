@@ -1,15 +1,10 @@
-package com.msb.test1;
+package com.project.test;
 
-import com.msb.dao.EmpDao;
-import com.msb.dao.MyConnectionPool;
-import com.msb.dao.impl.EmpDaoImpl;
-import com.msb.pojo.Emp;
+import com.project.dao.MyConnectionPool;
 
 import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Date;
 
-public class Test1 {
+public class ConnectionPoolTest {
     public static void main(String[] args) {
         Connection connection1 = MyConnectionPool.getConnection();
         Connection connection2 = MyConnectionPool.getConnection();

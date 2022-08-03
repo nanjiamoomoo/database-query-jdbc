@@ -1,8 +1,8 @@
-package com.msb.dao.impl;
+package com.project.dao.impl;
 
-import com.msb.dao.BaseDao;
-import com.msb.dao.EmpDao;
-import com.msb.pojo.Emp;
+import com.project.dao.BaseDao;
+import com.project.dao.EmpDao;
+import com.project.pojo.Emp;
 
 import java.util.List;
 

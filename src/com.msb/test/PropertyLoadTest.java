@@ -1,13 +1,13 @@
-package com.msb.test1;
+package com.project.test;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Test2 {
+public class PropertyLoadTest {
     public static void main(String[] args) {
         Properties properties = new Properties();
-        InputStream inputStream = Test2.class.getResourceAsStream("/jdbc.properties");// 获取相对路径
+        InputStream inputStream = PropertyLoadTest.class.getResourceAsStream("/jdbc.properties");// 获取相对路径
         try {
             properties.load(inputStream);
         } catch (IOException e) {

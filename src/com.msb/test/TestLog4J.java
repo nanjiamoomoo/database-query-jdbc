@@ -1,6 +1,5 @@
-package com.msb.test1;
+package com.project.test;
 
-import com.msb.dao.impl.EmpDaoImpl;
 import org.apache.log4j.Logger;
 
 public class TestLog4J {
@@ -19,7 +18,5 @@ public class TestLog4J {
         } catch (Exception e){
             logger.warn("Program Exception", e);
         }
-
-
     }
 }

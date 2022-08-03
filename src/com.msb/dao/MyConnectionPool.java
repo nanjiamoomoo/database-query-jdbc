@@ -1,6 +1,6 @@
-package com.msb.dao;
+package com.project.dao;
 
-import com.msb.util.PropertiesUtil;
+import com.project.util.PropertiesUtil;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
+//Generate connection object to access database
 public class MyConnectionPool {
     private static String driver;
     private static String url;

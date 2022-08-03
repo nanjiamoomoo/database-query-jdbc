@@ -1,4 +1,4 @@
-package com.msb.dao;
+package com.project.dao;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
